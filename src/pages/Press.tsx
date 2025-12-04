@@ -1,6 +1,7 @@
 import React from "react";
 import { Download, FileImage, FileText, Palette, Mail } from "lucide-react";
-import { PressAsset } from "../types/types";
+import { PressAsset } from "@/types/types";
+import { Logo } from "@/components/Logo";
 
 const assets: PressAsset[] = [
 	{
@@ -69,13 +70,11 @@ export const Press: React.FC = () => {
 						</h2>
 					</div>
 					<p className="max-w-md text-studio-light text-sm mt-4 md:mt-0 md:text-right">
-						Official brand assets and high-resolution media kits for
-						content creators and press. For specific inquiries,
-						contact{" "}
+						Official brand assets and high-resolution media kits for content
+						creators and press. For specific inquiries, contact{" "}
 						<a
 							href="mailto:press@nebulastudios.fake"
-							className="text-white border-b border-studio-accent hover:text-studio-accent transition-colors"
-						>
+							className="text-white border-b border-studio-accent hover:text-studio-accent transition-colors">
 							press@nebulastudios.com
 						</a>
 					</p>
@@ -85,19 +84,20 @@ export const Press: React.FC = () => {
 					{assets.map((asset) => (
 						<div
 							key={asset.id}
-							className="group bg-studio-card border border-white/5 rounded-xl overflow-hidden hover:border-studio-accent/50 transition-all duration-300 relative"
-						>
+							className="group bg-studio-card border border-white/5 rounded-xl overflow-hidden hover:border-studio-accent/50 transition-all duration-300 relative">
 							{/* Thumbnail */}
 							<div
-								className={`h-40 w-full relative ${asset.thumbnail} flex items-center justify-center overflow-hidden`}
-							>
+								className={`h-40 w-full relative ${asset.thumbnail} flex items-center justify-center overflow-hidden`}>
 								{/* Dark overlay that appears on hover to help contrast the button, MUST be below the button but above image */}
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-300 z-10" />
 
 								{/* Icons and Text (Lower Z-index) */}
 								{asset.type === "Logo" && (
-									<div className="text-studio-black font-display font-bold text-3xl z-0 group-hover:opacity-20 transition-opacity">
-										NEBULA
+									<div className="flex items-center gap-3">
+										<Logo />
+										<div className="text-studio-black font-display font-bold text-3xl z-0 group-hover:opacity-20 transition-opacity">
+											NEBULA
+										</div>
 									</div>
 								)}
 								{asset.type === "Guide" && (
@@ -107,12 +107,9 @@ export const Press: React.FC = () => {
 								{/* Button - Higher Z-index */}
 								<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
 									<button
-										onClick={() =>
-											handleDownload(asset.title)
-										}
+										onClick={() => handleDownload(asset.title)}
 										className="bg-white text-studio-black p-3 rounded-full shadow-lg hover:bg-studio-accent hover:text-white transition-colors transform scale-90 group-hover:scale-100"
-										title="Download Asset"
-									>
+										title="Download Asset">
 										<Download className="w-6 h-6" />
 									</button>
 								</div>

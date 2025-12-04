@@ -8,7 +8,7 @@ import {
 	Upload,
 	Check,
 } from "lucide-react";
-import { Job } from "../types/types";
+import { Job } from "@/types/types";
 import ReactMarkdown from "react-markdown";
 
 const jobs: Job[] = [

@@ -9,7 +9,7 @@ import {
 	Mail,
 	ArrowUpRight,
 } from "lucide-react";
-import { useNavigation } from "../App";
+import { useNavigation } from "@/App";
 
 export const Hero: React.FC = () => {
 	const containerRef = useRef<HTMLDivElement>(null);

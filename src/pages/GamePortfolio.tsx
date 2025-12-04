@@ -15,23 +15,21 @@ const games: Game[] = [
 		id: "1",
 		title: "ECHOES OF ETERNITY",
 		genre: "Action RPG",
-		image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop",
+		image:
+			"https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop",
 		rating: 4.9,
 		platforms: ["PC", "PS5"],
 		year: "2024",
 		description:
 			"Dive into a shattered world where time is fractured. Master the Chrono-Blade and rewrite history in this award-winning Action RPG.",
-		features: [
-			"40+ Hour Campaign",
-			"Co-op Raids",
-			"Unreal Engine 5 Graphics",
-		],
+		features: ["40+ Hour Campaign", "Co-op Raids", "Unreal Engine 5 Graphics"],
 	},
 	{
 		id: "2",
 		title: "CYBER STRIKE",
 		genre: "Competitive FPS",
-		image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop",
+		image:
+			"https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop",
 		rating: 4.7,
 		platforms: ["PC", "XSX", "PS5"],
 		year: "2023",
@@ -47,7 +45,8 @@ const games: Game[] = [
 		id: "3",
 		title: "STARLIGHT DRIFT",
 		genre: "Sci-Fi Racing",
-		image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop",
+		image:
+			"https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop",
 		rating: 4.5,
 		platforms: ["PC", "Mobile"],
 		year: "2022",
@@ -59,7 +58,8 @@ const games: Game[] = [
 		id: "4",
 		title: "VOID WALKER",
 		genre: "Horror Survival",
-		image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=2094&auto=format&fit=crop",
+		image:
+			"https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=2094&auto=format&fit=crop",
 		rating: 4.8,
 		platforms: ["PC", "PS5"],
 		year: "2023",
@@ -90,8 +90,7 @@ export const GamePortfolio: React.FC = () => {
 					{games.map((game) => (
 						<div
 							key={game.id}
-							className="group relative bg-studio-card rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-studio-accent/10"
-						>
+							className="group relative bg-studio-card rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-studio-accent/10">
 							{/* Image Container */}
 							<div className="relative h-80 overflow-hidden">
 								<img
@@ -105,8 +104,7 @@ export const GamePortfolio: React.FC = () => {
 								<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-studio-black/40 backdrop-blur-sm">
 									<button
 										onClick={() => setSelectedGame(game)}
-										className="bg-studio-accent text-white px-6 py-2 rounded font-display font-bold uppercase tracking-wider text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 hover:bg-orange-600"
-									>
+										className="bg-studio-accent text-white px-6 py-2 rounded font-display font-bold uppercase tracking-wider text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 hover:bg-orange-600">
 										View Details
 									</button>
 								</div>
@@ -171,8 +169,7 @@ export const GamePortfolio: React.FC = () => {
 							<div className="absolute inset-0 bg-gradient-to-t from-studio-card via-transparent to-transparent md:bg-gradient-to-r" />
 							<button
 								onClick={() => setSelectedGame(null)}
-								className="absolute top-4 left-4 md:hidden bg-black/50 p-2 rounded-full text-white"
-							>
+								className="absolute top-4 left-4 md:hidden bg-black/50 p-2 rounded-full text-white">
 								<X className="w-5 h-5" />
 							</button>
 						</div>
@@ -182,8 +179,7 @@ export const GamePortfolio: React.FC = () => {
 							<div className="flex justify-end mb-6 hidden md:flex">
 								<button
 									onClick={() => setSelectedGame(null)}
-									className="text-studio-light hover:text-white transition-colors"
-								>
+									className="text-studio-light hover:text-white transition-colors">
 									<X className="w-6 h-6" />
 								</button>
 							</div>
@@ -223,28 +219,23 @@ export const GamePortfolio: React.FC = () => {
 										Key Features
 									</h4>
 									<ul className="space-y-2">
-										{selectedGame.features?.map(
-											(feature, idx) => (
-												<li
-													key={idx}
-													className="flex items-center gap-2 text-studio-light text-sm"
-												>
-													<div className="w-1.5 h-1.5 bg-studio-accent rounded-full" />
-													{feature}
-												</li>
-											),
-										)}
+										{selectedGame.features?.map((feature, idx) => (
+											<li
+												key={idx}
+												className="flex items-center gap-2 text-studio-light text-sm">
+												<div className="w-1.5 h-1.5 bg-studio-accent rounded-full" />
+												{feature}
+											</li>
+										))}
 									</ul>
 								</div>
 
 								<div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-white/5">
 									<button className="flex-1 bg-studio-accent text-white py-4 rounded font-display font-bold uppercase tracking-wider hover:bg-orange-600 transition-colors flex items-center justify-center gap-2">
-										<ShoppingCart className="w-4 h-4" /> Buy
-										Now
+										<ShoppingCart className="w-4 h-4" /> Buy Now
 									</button>
 									<button className="flex-1 bg-white/5 text-white py-4 rounded font-display font-bold uppercase tracking-wider hover:bg-white/10 transition-colors flex items-center justify-center gap-2 border border-white/10">
-										<Play className="w-4 h-4 fill-current" />{" "}
-										Trailer
+										<Play className="w-4 h-4 fill-current" /> Trailer
 									</button>
 								</div>
 							</div>

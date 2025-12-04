@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Globe, User } from "lucide-react";
-import { NavItem } from "../types/types";
-import { useNavigation } from "../App";
+import { NavItem } from "@/types/types";
+import { useNavigation } from "@/App";
+import { Logo } from "./Logo";
 
 const navItems: NavItem[] = [
 	{ label: "GAMES", href: "/games" },
@@ -46,10 +47,8 @@ export const Navigation: React.FC = () => {
 						onClick={() => handleNavClick("/")}
 						className="flex-shrink-0 flex items-center gap-3 cursor-pointer"
 					>
-						<div className="w-10 h-10 bg-gradient-to-br from-studio-accent to-pink-600 rounded-lg flex items-center justify-center">
-							<Globe className="text-white w-6 h-6" />
-						</div>
-						<span className="font-display font-bold text-2xl tracking-widest text-white uppercase">
+						<Logo />
+						<span className="font-display font-bold text-3xl tracking-widest text-white uppercase">
 							NEBULA
 						</span>
 					</a>

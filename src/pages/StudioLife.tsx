@@ -8,7 +8,7 @@ import {
 	Lightbulb,
 	User,
 } from "lucide-react";
-import { useNavigation } from "../App";
+import { useNavigation } from "@/App";
 
 const teamMembers = [
 	{

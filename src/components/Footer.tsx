@@ -1,5 +1,6 @@
 import React from 'react';
 import { Globe, Twitter, Youtube, Facebook, Linkedin, Mail } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
   return (
@@ -8,13 +9,11 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
           <div className="col-span-1 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-studio-accent rounded-md flex items-center justify-center">
-                 <Globe className="h-5 w-5 text-white" />
-              </div>
-              <span className="font-display font-bold text-2xl tracking-widest text-white uppercase">
+            <div className="flex items-center gap-3 mb-6">
+              <Logo />
+              <span className="font-display font-bold text-3xl tracking-widest text-white uppercase">
                 NEBULA
-              </span>
+              </span>              
             </div>
             <p className="text-studio-light text-sm mb-6 leading-relaxed">
               Pushing the boundaries of interactive entertainment since 2010. We create worlds you'll never want to leave.
