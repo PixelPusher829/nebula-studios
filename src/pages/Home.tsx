@@ -12,11 +12,11 @@ import {
 } from "lucide-react";
 import { useNavigation } from "@/App";
 import Youtube from "react-youtube";
-import echosOfEternity from "@/images/home/echos-featured.jpg";
+import echosOfEternity from "@/images/home/echos-featured.webp";
 import heroVideo from "@/videos/hero-video.webm";
-import heroImage from "@/images/home/hero-image.jpg";
-import teamImage from "@/images/home/nebula-team.jpg"
-import careersImage from "@/images/home/careers-bg.jpg"
+import heroImage from "@/images/home/hero-image.webp";
+import teamImage from "@/images/home/nebula-team.webp";
+import careersImage from "@/images/home/careers-bg.webp";
 
 export const Home: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -29,7 +29,7 @@ export const Home: React.FC = () => {
     tl.fromTo(
       textRef.current,
       { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.5 },
+      { opacity: 1, y: 0, duration: 2, ease: "power3.out", delay: 0.5 },
     );
   }, []);
 
