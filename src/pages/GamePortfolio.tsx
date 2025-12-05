@@ -97,7 +97,7 @@ export const GamePortfolio: React.FC = () => {
                 <img
                   src={game.image}
                   alt={game.title}
-                  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-110 md:object-center"
                 />
                 <div className="from-studio-card absolute inset-0 bg-gradient-to-t via-transparent to-transparent opacity-80" />
 

@@ -10,7 +10,7 @@ import {
   ArrowUpRight,
   X,
 } from "lucide-react";
-import { useNavigation } from "@/App";
+import { useNavigate } from "react-router-dom";
 import Youtube from "react-youtube";
 import echosOfEternity from "@/images/home/echos-featured.webp";
 import heroVideo from "@/videos/hero-video.webm";
@@ -21,7 +21,7 @@ import careersImage from "@/images/home/careers-bg.webp";
 export const Home: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
-  const { navigate } = useNavigation();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {

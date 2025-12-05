@@ -8,7 +8,7 @@ import {
   Lightbulb,
   User,
 } from "lucide-react";
-import { useNavigation } from "@/App";
+import { useNavigate } from "react-router-dom";
 import grid1 from "@/images/studio/grid-1.webp";
 import grid2 from "@/images/studio/grid-2.webp";
 import grid3 from "@/images/studio/grid-3.webp";
@@ -89,7 +89,7 @@ const values = [
 ];
 
 export const StudioLife: React.FC = () => {
-  const { navigate } = useNavigation();
+  const navigate = useNavigate();
 
   return (
     <div className="bg-studio-black">
