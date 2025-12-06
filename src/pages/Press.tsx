@@ -6,19 +6,19 @@ import { Logo } from "@/components/Logo";
 const assets: PressAsset[] = [
   {
     id: "1",
-    title: "Nebula Brand Guide",
-    type: "Guide",
-    size: "12.4 MB",
-    format: "PDF",
-    thumbnail: "bg-studio-accent",
-  },
-  {
-    id: "2",
     title: "Logo Pack (Light/Dark)",
     type: "Logo",
     size: "5.2 MB",
     format: "ZIP",
     thumbnail: "bg-white",
+  },
+  {
+    id: "2",
+    title: "Nebula Brand Guide",
+    type: "Guide",
+    size: "12.4 MB",
+    format: "PDF",
+    thumbnail: "/images/press/brand-pack.webp",
   },
   {
     id: "3",
@@ -87,10 +87,10 @@ export const Press: React.FC = () => {
               {/* Thumbnail */}
               <div
                 className={`relative flex h-40 w-full items-center justify-center overflow-hidden bg-cover bg-top ${
-                  asset.type !== "Kit" ? asset.thumbnail : ""
+                  asset.type === "Logo" ? asset.thumbnail : ""
                 }`}
                 style={
-                  asset.type === "Kit"
+                  asset.type === "Kit" || asset.type === "Guide"
                     ? { backgroundImage: `url(${asset.thumbnail})` }
                     : {}
                 }
@@ -106,9 +106,6 @@ export const Press: React.FC = () => {
                       NEBULA
                     </div>
                   </div>
-                )}
-                {asset.type === "Guide" && (
-                  <Palette className="z-0 h-15 w-20 text-white transition-opacity group-hover:opacity-20" />
                 )}
 
                 {/* Button - Higher Z-index */}

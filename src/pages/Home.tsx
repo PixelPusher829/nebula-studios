@@ -70,7 +70,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
       )}
-      <div className="relative flex min-h-screen w-full flex-col justify-center overflow-hidden">
+      <div className="relative flex min-h-[max(100vh,50rem)] w-full flex-col justify-center overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <div className="bg-studio-black/60 absolute inset-0 z-10" />
@@ -132,8 +132,8 @@ export const Home: React.FC = () => {
       </div>
 
       {/* 2. STATS BAR */}
-      <div className="bg-studio-card/80 relative z-20 -mt-20 mb-12 border-t border-white/10 backdrop-blur-md md:-mt-24">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-8 divide-x divide-white/10 px-6 py-8 md:grid-cols-4 md:gap-y-0">
+      <div className="bg-studio-card/80 relative z-20 -mt-25 mb-12 border-t border-white/10 backdrop-blur-md">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-8 divide-x divide-white/10 px-6 py-5 md:grid-cols-4 md:gap-y-0">
           {[
             { label: "Active Players", value: "10M+" },
             { label: "GOTY Awards", value: "24" },
