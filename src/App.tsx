@@ -13,6 +13,7 @@ import { NotFound } from "@/pages/NotFound";
 import { MessageSquare, X } from "lucide-react";
 import { getStudioAssistance } from "@/services/geminiService";
 import { ChatMessage } from "@/types/types";
+import ScrollToTop from "@/components/utils/ScrollToTop";
 
 // --- Navigation Context & Hook ---
 interface NavContextType {
@@ -146,6 +147,7 @@ const AppContent: React.FC = () => {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppContent />
     </BrowserRouter>
   );
